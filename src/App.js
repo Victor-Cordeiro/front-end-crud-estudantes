@@ -6,6 +6,7 @@ import NavBar from './component/common/NavBar';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import AddEstudante from './component/estudante/AddEstudante';
 import EditEstudante from './component/estudante/EditEstudante';
+import Search from './component/common/Search';
 
 function App() {
   return (
