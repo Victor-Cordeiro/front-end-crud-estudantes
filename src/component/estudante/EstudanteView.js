@@ -17,6 +17,12 @@ const EstudanteView = () => {
     setEstudantes(result.data);
   };
 
+  // Função para excluir um estudante
+  const deleteEstudante = async (id) => {
+    await axios.delete(`http://localhost:8080/estudantes/delete/${id}`);
+    loadEstudantes(); // Recarregar a lista de estudantes após a exclusão
+  };
+
   return (
     <section>
       <table className="table table-bordered table-hover shadow-lg ">
@@ -58,7 +64,10 @@ const EstudanteView = () => {
                 </Link>
               </td>
               <td className="mx-2">
-                <button className="btn btn-danger">
+                <button
+                  className="btn btn-danger"
+                  onClick={() => deleteEstudante(estudante.id)}
+                >
                   <FaTrashAlt />
                 </button>
               </td>
