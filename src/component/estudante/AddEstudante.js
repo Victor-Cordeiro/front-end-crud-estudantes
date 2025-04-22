@@ -91,9 +91,7 @@ const AddEstudante = () => {
         <button type="submit" className="btn btn-primary mb-3">
           Adicionar Estudante
         </button>
-        <button type="reset" className="btn btn-danger mb-3 mx-2">
-          Limpar
-        </button>
+
         <Link to={'/view-students'} className="btn btn-secondary mb-3 mx-2">
           Voltar
         </Link>
